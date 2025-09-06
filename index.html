@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aksh's personal portfolio website showcasing skills in web development.">
+    
+    <title>Aksh's Portfolio | Web Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Aksh's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                Hi, my name is <span class="purple">Aksh</span>.
+                <div>I'm a passionate</div>
+                <span id="element" class="purple"></span>
+                <div class="buttons">
+                    <a href="/path-to-your-resume.pdf" target="_blank" class="btn">View Resume</a>
+                    <a href="https://github.com/qwertypoinor" target="_blank" class="btn">Visit Github</a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="Programmer-PNG-Images-HD.png" alt="Illustration of a programmer coding">
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="experience" class="secondSection">
+            <span class="text-gray">What I've accomplished so far</span>
+            <h1>Work Experience</h1>
+            <div class="experience-box">
+                <div class="experience-item">
+                    <img class="image-top" src="html1.png" alt="HTML5 Logo">
+                    <div class="experience-title">HTML Developer</div>
+                    <div class="experience-desc">
+                        Learned HTML through an internship course and built several static sites and project pages.
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <img class="image-top" src="css.png" alt="CSS3 Logo">
+                    <div class="experience-title">CSS Developer</div>
+                    <div class="experience-desc">
+                        Mastered CSS for styling, layouts with Flexbox and Grid, and creating responsive designs.
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <img class="image-top" src="javascript.png" alt="JavaScript Logo">
+                    <div class="experience-title">JavaScript Developer</div>
+                    <div class="experience-desc">
+                        Utilized JavaScript to create dynamic and interactive user experiences on the web.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Aksh's Developer Portfolio</h3>
+                <p class="text-gray">Thank you for visiting my personal portfolio.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <p>&copy; 2025 Aksh's Portfolio | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            // Added more strings and loop for a dynamic effect
+            strings: ['Web Developer.', 'UI/UX Enthusiast.', 'Programmer.'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>

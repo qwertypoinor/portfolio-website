@@ -1,0 +1,266 @@
+/* Using root for color variables for easy theme changes */
+:root {
+    --bg-dark-navy: #0e0e36; /* rgb(14, 14, 54) */
+    --bg-light-navy: #101043; /* rgb(16, 16, 67) */
+    --primary-purple: #8c44d0; /* rgb(140, 68, 208) */
+    --light-purple-hover: #8f8fe1; /* rgb(143, 143, 225) */
+    --text-white: #ffffff;
+    --text-gray: #a0a0a0;
+    --border-lavender: #e6e6fa; /* lavender */
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark-navy);
+    color: var(--text-white);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Header & Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 90px;
+    background-color: var(--bg-light-navy);
+    padding: 0 2rem;
+}
+
+nav .left {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 1.5rem; /* Using rem for scalable spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+nav ul li a:hover {
+    color: var(--light-purple-hover);
+    /* Removed font-size change to prevent layout shift */
+}
+
+/* --- Main Content Sections --- */
+main hr {
+    border: 0;
+    background: var(--border-lavender);
+    height: 1px; /* Made slightly thicker */
+    margin: 60px 5%; /* Use percentage for responsive margins */
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    margin: 80px 0;
+    padding: 0 5%;
+    gap: 2rem;
+}
+
+.leftSection {
+    font-size: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.rightSection {
+    width: 100%;
+    max-width: 400px;
+}
+
+.rightSection img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.purple {
+    color: var(--primary-purple);
+    font-weight: 700;
+}
+
+.buttons {
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 12px 20px;
+    background: var(--bg-light-navy);
+    color: var(--text-white);
+    border: 2px solid var(--text-white);
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none; /* For the 'a' tag styled as a button */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-purple);
+    color: var(--text-white);
+    border-color: var(--primary-purple);
+}
+
+/* --- Experience Section --- */
+.secondSection {
+    max-width: 85vw;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.secondSection .text-gray {
+    color: var(--text-gray);
+}
+
+.secondSection h1 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+/* New responsive layout for experience */
+.experience-box {
+    display: flex;
+    gap: 2rem; /* Space between cards */
+    justify-content: center;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+}
+
+.experience-item {
+    background-color: var(--bg-light-navy);
+    border: 1px solid var(--primary-purple);
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    width: 250px; /* Set a base width for each card */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-item .image-top {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+.experience-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.experience-desc {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--bg-light-navy); /* Consistent color */
+    color: var(--text-white);
+    padding: 40px 0 20px 0;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 5% 30px 5%;
+    text-align: center;
+}
+
+.footer-section h3, .footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-purple);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 1.8;
+}
+
+.footer-section ul li a:hover {
+    color: var(--light-purple-hover);
+}
+
+.footer-rights {
+    text-align: center;
+    padding: 20px 0 0 0;
+    border-top: 1px solid #333;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+
+/* --- Media Query for Responsiveness --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+    }
+
+    nav .left {
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 1rem;
+    }
+
+    .firstSection {
+        flex-direction: column-reverse; /* Stack image on top of text */
+        text-align: center;
+        margin: 40px 0;
+    }
+    
+    .leftSection {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .btn {
+        width: 80%;
+    }
+}
