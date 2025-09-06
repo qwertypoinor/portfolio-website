@@ -1,22 +1,19 @@
-/* Using root for color variables for easy theme changes */
 :root {
-    --bg-dark-navy: #0e0e36; /* rgb(14, 14, 54) */
-    --bg-light-navy: #101043; /* rgb(16, 16, 67) */
-    --primary-purple: #8c44d0; /* rgb(140, 68, 208) */
-    --light-purple-hover: #8f8fe1; /* rgb(143, 143, 225) */
+    --bg-dark-navy: #0e0e36; 
+    --bg-light-navy: #101043; 
+    --primary-purple: #8c44d0; 
+    --light-purple-hover: #8f8fe1; 
     --text-white: #ffffff;
     --text-gray: #a0a0a0;
-    --border-lavender: #e6e6fa; /* lavender */
+    --border-lavender: #e6e6fa; 
 }
 
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Smooth scrolling behavior */
 html {
     scroll-behavior: smooth;
 }
@@ -27,7 +24,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* --- Header & Navigation --- */
 nav {
     display: flex;
     justify-content: space-around;
@@ -49,34 +45,33 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    margin: 0 1.5rem; /* Using rem for scalable spacing */
+    margin: 0 1.5rem; 
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--text-white);
     font-size: 1.1rem;
-    transition: color 0.3s ease; /* Smooth transition on hover */
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover {
     color: var(--light-purple-hover);
-    /* Removed font-size change to prevent layout shift */
+    
 }
 
-/* --- Main Content Sections --- */
 main hr {
     border: 0;
     background: var(--border-lavender);
-    height: 1px; /* Made slightly thicker */
-    margin: 60px 5%; /* Use percentage for responsive margins */
+    height: 1px; 
+    margin: 60px 5%; 
 }
 
 .firstSection {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    flex-wrap: wrap; 
     margin: 80px 0;
     padding: 0 5%;
     gap: 2rem;
@@ -95,7 +90,7 @@ main hr {
 
 .rightSection img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
 }
 
 .purple {
@@ -115,7 +110,7 @@ main hr {
     border-radius: 6px;
     font-size: 1.1rem;
     cursor: pointer;
-    text-decoration: none; /* For the 'a' tag styled as a button */
+    text-decoration: none; 
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-right: 1rem;
 }
@@ -126,7 +121,7 @@ main hr {
     border-color: var(--primary-purple);
 }
 
-/* --- Experience Section --- */
+
 .secondSection {
     max-width: 85vw;
     margin: auto;
@@ -142,12 +137,12 @@ main hr {
     margin-bottom: 3rem;
 }
 
-/* New responsive layout for experience */
+
 .experience-box {
     display: flex;
-    gap: 2rem; /* Space between cards */
+    gap: 2rem; 
     justify-content: center;
-    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    flex-wrap: wrap;
 }
 
 .experience-item {
@@ -155,7 +150,7 @@ main hr {
     border: 1px solid var(--primary-purple);
     border-radius: 8px;
     padding: 2rem 1.5rem;
-    width: 250px; /* Set a base width for each card */
+    width: 250px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -178,9 +173,8 @@ main hr {
     color: var(--text-gray);
 }
 
-/* --- Footer --- */
 footer {
-    background-color: var(--bg-light-navy); /* Consistent color */
+    background-color: var(--bg-light-navy); 
     color: var(--text-white);
     padding: 40px 0 20px 0;
     margin-top: 80px;
@@ -224,7 +218,7 @@ footer {
 }
 
 
-/* --- Media Query for Responsiveness --- */
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -245,7 +239,7 @@ footer {
     }
 
     .firstSection {
-        flex-direction: column-reverse; /* Stack image on top of text */
+        flex-direction: column-reverse; 
         text-align: center;
         margin: 40px 0;
     }
